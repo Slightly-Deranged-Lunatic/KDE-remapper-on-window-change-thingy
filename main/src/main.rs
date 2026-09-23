@@ -29,13 +29,7 @@ fn main() {
 fn get_window_ids() -> Vec<String> {
     let command_output = Command::new("kdotool").arg("search").output().unwrap();
 
-    let mut output = String::new();
-
-    if command_output.status.success() {
-        output = String::from_utf8(command_output.stdout).expect("String was not a valid UTF 8");
-    } else {
-        panic!("kdotool was not a success, output: {:?}", command_output);
-    }
+    let output = String::from_utf8(command_output.stdout).expect("String was not a valid UTF 8");
 
     output.lines().map(String::from).collect()
 }
@@ -81,5 +75,5 @@ fn sober_open(window_to_search_for: &String) -> bool {
         }
     }
 
-    return false;
+    false
 }
