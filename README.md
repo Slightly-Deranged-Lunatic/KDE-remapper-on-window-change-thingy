@@ -1,2 +1,4 @@
 # KDE-remapper-on-window-change-thingy
-Change your keybinds set by the KDE settings menu by rewriting kcminputrc depending on the currently opened window
+Personal project that enables an input-remapper preset when the desired window is opened.
+
+Made this becase I got tired of doing it myself.
