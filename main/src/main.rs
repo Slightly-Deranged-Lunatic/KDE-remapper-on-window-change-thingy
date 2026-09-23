@@ -10,7 +10,7 @@ fn main() {
     loop {
         thread::sleep(sleep_time);
         if sober_open(&window_to_search_for) {
-            enable_present(device);
+            enable_preset(device);
         } else {
             continue;
         }
@@ -44,7 +44,7 @@ fn get_window_ids() -> Vec<String> {
     return window_ids
 }
 
-fn enable_present(device: &str) {
+fn enable_preset(device: &str) {
     let preset = "DVN";
 
     let output = Command::new("input-remapper-control")
